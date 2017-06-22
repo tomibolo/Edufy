@@ -4,9 +4,8 @@ import { connect } from 'react-redux';
 import Nav from '../layouts/Nav';
 import Footer from '../layouts/Footer';
 import SignUpForm from './SignUpForm';
-
 const styleHeader = {
-	'background': "url('http://lorempixel.com/1920/640/business/')",
+	// 'background': "url('http://lorempixel.com/1920/640/business/')",
 	'backgroundSize': 'cover',
 	'backgroundPosition': 'center center'
 }
@@ -17,6 +16,7 @@ const Home = (history) => {
 
 			<div>
 				<Nav />
+
 				<header className="container-fluid" style={styleHeader}>
 	        <div className="row">
 	            <div className="container">
@@ -28,7 +28,7 @@ const Home = (history) => {
 	                        </div>
 	                    </div>
 	                    <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 slide-home">
-												<SignUpForm  history={history.history}/>
+												<SignUpForm  history={ history.history }/>
 	                    </div>
 	                </div>
 	            </div>
@@ -48,7 +48,7 @@ const Home = (history) => {
 		                <div className="item_box">
 		                    <div className="pic">
 		                    <a href="detalle-curso.php">
-		                        <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure>
+		                        {/* <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure> */}
 		                        <div className="hover-effect">
 		                            <i className="fa fa-play-circle-o" aria-hidden="true"></i>
 		                        </div>
@@ -79,7 +79,7 @@ const Home = (history) => {
 		                <div className="item_box">
 		                    <div className="pic">
 		                    <a href="detalle-curso.php">
-		                        <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure>
+		                        {/* <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure> */}
 		                        <div className="hover-effect">
 		                            <i className="fa fa-play-circle-o" aria-hidden="true"></i>
 		                        </div>
@@ -110,7 +110,7 @@ const Home = (history) => {
 		                <div className="item_box">
 		                    <div className="pic">
 		                    <a href="detalle-curso.php">
-		                        <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure>
+		                        {/* <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure> */}
 		                        <div className="hover-effect">
 		                            <i className="fa fa-play-circle-o" aria-hidden="true"></i>
 		                        </div>
@@ -141,7 +141,7 @@ const Home = (history) => {
 		                <div className="item_box">
 		                    <div className="pic">
 		                    <a href="detalle-curso.php">
-		                        <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure>
+		                        {/* <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure> */}
 		                        <div className="hover-effect">
 		                            <i className="fa fa-play-circle-o" aria-hidden="true"></i>
 		                        </div>
@@ -172,7 +172,7 @@ const Home = (history) => {
 		                <div className="item_box">
 		                    <div className="pic">
 		                    <a href="detalle-curso.php">
-		                        <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure>
+		                        {/* <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure> */}
 		                        <div className="hover-effect">
 		                            <i className="fa fa-play-circle-o" aria-hidden="true"></i>
 		                        </div>
@@ -203,7 +203,7 @@ const Home = (history) => {
 		                <div className="item_box">
 		                    <div className="pic">
 		                    <a href="detalle-curso.php">
-		                        <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure>
+		                        {/* <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure> */}
 		                        <div className="hover-effect">
 		                            <i className="fa fa-play-circle-o" aria-hidden="true"></i>
 		                        </div>
@@ -234,7 +234,7 @@ const Home = (history) => {
 		                <div className="item_box">
 		                    <div className="pic">
 		                    <a href="detalle-curso.php">
-		                        <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure>
+		                        {/* <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure> */}
 		                        <div className="hover-effect">
 		                            <i className="fa fa-play-circle-o" aria-hidden="true"></i>
 		                        </div>
@@ -265,7 +265,7 @@ const Home = (history) => {
 		                <div className="item_box">
 		                    <div className="pic">
 		                    <a href="detalle-curso.php">
-		                        <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure>
+		                        {/* <figure><img src="http://lorempixel.com/640/480/business/" className="img-responsive" alt="" /></figure> */}
 		                        <div className="hover-effect">
 		                            <i className="fa fa-play-circle-o" aria-hidden="true"></i>
 		                        </div>

@@ -1,16 +1,23 @@
 import React from 'react';
+import { Modal, Button } from 'react-bootstrap';
 // import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Dropdown, MenuItem } from 'react-bootstrap';
 
 // import { userLogoutRequest} from '../../actions/authActions';
-// import { getUsersRequest } from '../../actions/usersActions';
+import { toggleModal } from '../../actions/modalAction';
 
-const Nav = ({ auth }) => {
+const Nav = ({ auth, modal, toggleModal }) => {
+
+	const toggle = () => {
+		modal.show = !modal.show
+		toggleModal({show: modal.show });
+	}
+
 	return (
 			<nav className="navbar navbar-default navbar-static-top">
+				<Button onClick={toggle}>BOTON</Button>
 				<div className="container">
-
 					<div className="navbar-header">
 	            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
 	                <span className="sr-only">Toggle Navigation</span>
@@ -20,14 +27,12 @@ const Nav = ({ auth }) => {
 	            </button>
 	            <a className="navbar-brand" href="index.php"><img src={require('../assets/img/logo.png')} alt="" /></a>
 	        </div>
-
 					<form className="navbar-form navbar-left" role="search">
 	            <div className="input-group">
 	              <input type="text" className="form-control input" />
 	              <span className="input-group-addon"><i className="fa fa-search" aria-hidden="true"></i></span>
 	            </div>
 	        </form>
-
 					<div className="collapse navbar-collapse" id="app-navbar-collapse">
 	            <ul className="nav navbar-nav navbar-right">
 	                <li className="borde-right"><a href="">CURSOS</a></li>
@@ -57,16 +62,40 @@ const Nav = ({ auth }) => {
 	                </Dropdown>
 	            </ul>
 	        </div>
-
 				</div>
+				<Modal
+          show={modal.show}
+          // onHide={toggle.bind(this)}
+          // container={this}
+          aria-labelledby="contained-modal-title"
+        >
+          <Modal.Header closeButton>
+            {/* <Modal.Title id="contained-modal-title">Contained Modal {props.dataNav.show ? 'true' : 'false'}</Modal.Title> */}
+          </Modal.Header>
+          <Modal.Body>
+            Elit est explicabo ipsum eaque dolorem blanditiis doloribus sed id ipsam, beatae, rem fuga id earum? Inventore et facilis obcaecati.
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={toggle}>Close</Button>
+          </Modal.Footer>
+        </Modal>
 			</nav>
 		);
 }
 
 const mapStateToProps = state => {
   return {
-    auth: state.auth
+    auth: state.auth,
+		modal: state.modal
   };
 }
 
-export default connect(mapStateToProps)(Nav);
+const mapDispatchToProps = dispatch => {
+	return {
+		toggleModal(modal) {
+			dispatch(toggleModal(modal));
+		}
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Nav);
