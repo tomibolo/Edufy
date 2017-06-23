@@ -12,7 +12,15 @@ export function getUsersAction(users) {
 export function getUsersRequest() {
   return dispatch => {
     return axios.get('http://localhost:8000/users').then(response => {
-      dispatch(getUsersAction(response.data.users));
+
+      if(!response.data.errors){
+
+        dispatch(getUsersAction(response.data.users));
+
+      } else {
+        console.log(response.data.errors);
+      }
+
     });
   }
 }
@@ -31,8 +39,16 @@ export function setUserAction(user) {
 export function setUserRequest(user) {
   return dispatch => {
     return axios.post('http://localhost:8000/users', user).then(response => {
-      dispatch(setUserAction(user));
+
+      if(!response.data.errors){
+
+        dispatch(setUserAction(user));
+
       // dispatch(getUsersRequest());
+      } else {
+        console.log(response.data.errors);
+      }
+
     });
   }
 }

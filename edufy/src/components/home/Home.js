@@ -15,7 +15,7 @@ const Home = (history) => {
 	return (
 
 			<div>
-				<Nav />
+				<Nav history={ history.history }/>
 
 				<header className="container-fluid" style={styleHeader}>
 	        <div className="row">

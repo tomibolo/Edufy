@@ -10,9 +10,8 @@ const initialState = {
 };
 
 let token = localStorage['jwtToken'];
-
 //Levanto sesion en caso que este logueado.
-if( !isEmpty(token) && !isTokenExpired(token)){
+if( token !== 'undefined' && !isEmpty(token) && !isTokenExpired(token)){
   initialState.isAuthenticated = true;
   initialState.user = jwtDecode(token);
   setAuthorizationToken(token);

@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose } from 'redux';
 import combineReducers from './reducers/combineReducers';
-import { getUsersRequest } from './actions/usersActions';
+// import { getUsersRequest } from './actions/usersActions';
 
 //Routes
 import Routes from './config/routes';
@@ -29,14 +29,11 @@ const store = createStore(
      window.devToolsExtension ? window.devToolsExtension() : f => f
    )
 );
-
-  //Carga datos
-  if(store.getState().auth.isAuthenticated){
-    store.dispatch(getUsersRequest());
-  }
-
 console.log(store.getState());
-
+  //Carga datos
+  // if(store.getState().auth.isAuthenticated){
+  //   store.dispatch(getUsersRequest());
+  // }
 ReactDOM.render(
 	<Provider  store={store}>
 		<Routes />
